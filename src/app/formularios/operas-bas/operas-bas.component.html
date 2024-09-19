@@ -1,0 +1,19 @@
+<div>
+  <h1>Operaciones</h1>
+</div>
+
+<div>
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Numero 1</label>
+  <input class="form-control form-control-lg" [(ngModel)]="num1" type="text" placeholder="numero" id="inputLarge">
+</div>
+
+<div>
+  <label class="col-form-label col-form-label-lg mt-4" for="inputLarge">Numero 2</label>
+  <input class="form-control form-control-lg" [(ngModel)]="num2" type="text" placeholder="numero" id="inputLarge">
+</div>
+
+<button (click)="sumar()" type="button" class="btn btn-primary">sumar</button>
+
+<div>
+  <h2>Resultado es: {{resultado}} </h2>
+</div>

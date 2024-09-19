@@ -10,12 +10,12 @@
             <div class="col-md-2">
                 Filtrar por:</div>
                 <div class="col-md-4">
-                    <input type="text" class="form-control1" name="filter">
+                    <input [(ngModel)]="listFilter" type="text" class="form-control1" name="filter">
                 </div>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <h3>Filtro: </h3>
+                <h3>Filtro:{{listFilter}}</h3>
             </div>
         </div>
         <div class="table-responsive">
@@ -24,8 +24,7 @@
                     <tr>
                         <th>
                             <button (click)="showImage()" type="button"
-                            class="btn btn-primary">Imagen</button></th>
-                        <th>Imagen</th>
+                            class="btn btn-primary">{{muestraImg?'Ocultar':'Muestra'}}Imagen</button></th>
                         <th>Modelo</th>
                         <th>Descripcion</th>
                         <th>Ano</th>
@@ -35,15 +34,12 @@
                     </tr>
                 </thead>
  <tbody>
-    <tr *ngFor="let producto of productos">
-        <td><img *ngIf="muestraImg" [src]="producto.imagenUrl"></td>
+    <tr *ngFor="let producto of productos | productoFilter:listFilter">
         <td>
-            <img [src]="producto.imagenUrl"
+            <img *ngIf="muestraImg" [src]="producto.ImagenUrl"
             [title]="producto.Modelo"
-            [style.width.px]="imagenWidth"
-            [style.margin.px]="imagenMargi"
-        ></td>
-        <td>{{producto.Imagen}}</td>
+            [style.width.px]="imageWidth"
+            [style.margin.px]="imageMargi"></td>
         <td>{{producto.Modelo}}</td>
         <td>{{producto.Descripcion}}</td>
         <td>{{producto.Year}}</td>
