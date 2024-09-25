@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+/* import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
@@ -22,4 +22,4 @@ export class Ejemplo1Component implements OnInit {
     this.resultado=numero1*numero2;
   }
 
-}
+} */

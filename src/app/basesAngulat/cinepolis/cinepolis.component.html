@@ -1,0 +1,34 @@
+<div>
+  <form [formGroup]="cinepolisForm" (ngSubmit)="calcularPrecio()">
+    <label for="nombre">Nombre:</label>
+    <input id="nombre" formControlName="nombre" type="text" />
+    <div *ngIf="cinepolisForm.get('nombre')?.invalid && cinepolisForm.get('nombre')?.touched">
+      El nombre es requerido y debe tener al menos 3 caracteres.
+    </div>
+
+    <label for="cantidadPersonas">Cantidad de Personas:</label>
+    <input id="cantidadPersonas" formControlName="cantidadPersonas" type="number" />
+    <div *ngIf="cinepolisForm.get('cantidadPersonas')?.invalid && cinepolisForm.get('cantidadPersonas')?.touched">
+      La cantidad de personas debe estar entre 1 y 7.
+    </div>
+
+    <label for="cantidadBoletos">Cantidad de Boletos:</label>
+    <input id="cantidadBoletos" formControlName="cantidadBoletos" type="number" />
+    <div *ngIf="cinepolisForm.get('cantidadBoletos')?.invalid && cinepolisForm.get('cantidadBoletos')?.touched">
+      La cantidad de boletos debe estar entre 1 y 7.
+    </div>
+
+    <label for="tarjetaCineco">¿Usa tarjeta Cineco?</label>
+    <input id="tarjetaCineco" formControlName="tarjetaCineco" type="checkbox" />
+
+    <button type="submit" [disabled]="cinepolisForm.invalid">Calcular Precio</button>
+  </form>
+
+  <div *ngIf="mensajeError" style="color: red;">
+    {{ mensajeError }}
+  </div>
+
+  <div *ngIf="precioFinal > 0">
+    El precio final es: {{ precioFinal | number:'1.2-2' }} pesos.
+  </div>
+</div>

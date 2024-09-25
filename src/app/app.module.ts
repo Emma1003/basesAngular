@@ -6,22 +6,26 @@ import { AppComponent } from './app.component';
 import { ProductListComponent } from './product/product-list/product-list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductoFilterPipe } from './product/producto-filter.pipe';
-import { OperasBasComponent } from './formularios/operas-bas/operas-bas.component';
-import { Ejemplo1Component } from './formularios/ejemplo1/ejemplo1.component';
+import { CinepolisComponent} from './basesAngulat/cinepolis/cinepolis.component';
+
+
+
+/*
+import { Ejemplo1Component } from './formularios/ejemplo1/ejemplo1.component'; */
 
 @NgModule({
   declarations: [
     AppComponent,
     ProductListComponent,
     ProductoFilterPipe,
-    OperasBasComponent,
-    Ejemplo1Component
+    CinepolisComponent,
+   /* Ejemplo1Component*/
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
