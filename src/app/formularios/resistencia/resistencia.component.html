@@ -1,0 +1,90 @@
+
+<h4>Trabajo de Resentencias</h4>
+<div class="container"></div>
+  <form [formGroup]="resistenciaForm" >
+    <div class="bandas">
+      <label for="color1">Primera Banda</label>
+      <select id="color1" formControlName="color1" (change)="updateColors()">
+        <option value="0">Negro</option>
+        <option value="1">Café</option>
+        <option value="2">Rojo</option>
+        <option value="3">Naranja</option>
+        <option value="4">Amarillo</option>
+        <option value="5">Verde</option>
+        <option value="6">Azul</option>
+        <option value="7">Violeta</option>
+        <option value="8">Gris</option>
+        <option value="9">Blanco</option>
+      </select>
+
+      <label for="color2">Segunda Banda</label>
+      <select id="color2" formControlName="color2" (change)="updateColors()">
+        <option value="0">Negro</option>
+        <option value="1">Café</option>
+        <option value="2">Rojo</option>
+        <option value="3">Naranja</option>
+        <option value="4">Amarillo</option>
+        <option value="5">Verde</option>
+        <option value="6">Azul</option>
+        <option value="7">Violeta</option>
+        <option value="8">Gris</option>
+        <option value="9">Blanco</option>
+      </select>
+
+      <label for="color3">Tercera Banda</label>
+      <select id="color3" formControlName="color3" (change)="updateColors()">
+        <option value="0">Negro</option>
+        <option value="1">Café</option>
+        <option value="2">Rojo</option>
+        <option value="3">Naranja</option>
+        <option value="4">Amarillo</option>
+        <option value="5">Verde</option>
+        <option value="6">Azul</option>
+        <option value="7">Violeta</option>
+        <option value="8">Gris</option>
+        <option value="9">Blanco</option>
+      </select>
+    </div>
+
+    <div class="tolerancia">
+      <label>Tolerancia</label>
+      <input type="radio" formControlName="tolerancia" value="5" id="oro"  (change)="updateColors()"/>
+      <label for="oro">Oro</label>
+
+      <input type="radio" formControlName="tolerancia" value="10" id="plata"  (change)="updateColors()" />
+      <label for="plata">Plata</label>
+    </div>
+ 
+ <div class="row">
+  <button class="btn-registrar" (click)="calcularResistencia()">Registrar</button>
+
+
+ </div>
+  </form>
+
+  <div class="resultado">
+    <table class="result-table">
+      <thead>
+        <tr>
+          <th>Color1</th>
+          <th>Color2</th>
+          <th>Color3</th>
+          <th>Tolerancia</th>
+          <th>Valor</th>
+          <th>Valor máximo</th>
+          <th>Valor mínimo</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td [style.background]="color1Hex" [style.color]="getTextColor(color1Hex)"></td>
+          <td [style.background]="color2Hex" [style.color]="getTextColor(color2Hex)"></td>
+          <td [style.background]="color3Hex" [style.color]="getTextColor(color3Hex)"></td>
+          <td [style.background]="toleranciaHex" [style.color]="getTextColor(toleranciaHex)"></td>
+          <td>{{ valorResistencia }}</td>
+          <td>{{ valorMaximo }}</td>
+          <td>{{ valorMinimo }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

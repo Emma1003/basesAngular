@@ -1,4 +1,5 @@
- import { Component } from '@angular/core';
+ /* import { Component } from '@angular/core';
+ import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cinepolis',
@@ -37,4 +38,4 @@ export class CinepolisComponent {
     // Asignar el precio final
     this.precioFinal = precioConDescuento;
   }
-} 
+}  */

@@ -1,0 +1,87 @@
+
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, sans-serif;
+}
+
+.bandas, .tolerancia {
+  margin-bottom: 20px;
+  background-color: rgb(54, 65, 61);
+  width: 25%;
+  border: solid 5px black;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  background-color: rgb(228, 225, 204);
+  margin-right: 30px;
+  width: 25%;
+}
+
+select, input[type="radio"] {
+  margin-bottom: 20px;
+  background-color: aliceblue;
+}
+
+.resultado {
+  margin-top: 20px;
+}
+
+.result-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  background-color: aqua
+}
+
+.result-table th, .result-table td {
+  border: 1px solid rgb(12, 147, 52);
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.result-table td {
+  height: 40px;
+  width: auto;
+  background-color: azure;
+}
+
+.result-table td:first-child {
+  width: 100px;
+}
+
+.result-table td:nth-child(2), 
+.result-table td:nth-child(3), 
+.result-table td:nth-child(4) {
+  width: 100px;
+  background-color: blanchedalmond;
+}
+
+.result-table th {
+  background-color: #f2f2f2;
+}
+
+.result-table td {
+  font-weight: bold;
+}
+
+td[style*="background"] {
+  color: white;
+}
+
+.btn-registrar {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
